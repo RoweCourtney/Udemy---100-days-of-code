@@ -62,10 +62,10 @@ function displayUserData() {
 displayUserDataBtn.addEventListener("click", displayUserData);
 
 // __________ Statistics (while)__________
-const rollDiceBtn = document.querySelector("#statistics buttion");
+const rollDiceBtn = document.querySelector("#statistics button");
 
 function rollDice() {
-   return Math.floor(Math.random() * 6) = 1;
+   return Math.floor(Math.random() * 6) + 1;
 };
 
 function diceRolls() {
@@ -101,9 +101,10 @@ function diceRolls() {
 
    const outputTotalRolls = document.getElementById("output-total-rolls");
 
-   const outputTartetNumber = document.getElementById("output-target-number");
+   const outputTargetNumber = document.getElementById("output-target-number");
 
-   outputTartetNumber.textContent = enteredNumber;
+   outputTotalRolls.textContent = numberOfRolls;
+   outputTargetNumber.textContent = enteredNumber;
 };
 
 rollDiceBtn.addEventListener("click", diceRolls);
