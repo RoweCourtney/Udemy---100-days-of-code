@@ -1,0 +1,214 @@
+/* __________ General __________ */
+body {
+   background-color: aliceblue;
+}
+
+header {
+   background-color: rgb(9, 94, 82);
+   padding: 1rem 5%;
+   text-align: center;
+}
+
+h1, h3 {
+   font-family: "Julee";
+}
+
+h1 {
+   font-size: 3rem;
+   margin: 1rem;
+}
+
+h3 {
+   font-size: 1.5rem;
+}
+
+h2, p {
+   font-family: "Josefin Sans";
+   font-size: 1rem;
+}
+
+/* __________ Buttons __________ */
+.Btn {
+   padding: 0.5rem;
+   background-color: rgb(13, 134, 118);
+   border-radius: 3px;
+   font-family: "Josefin Sans";
+   font-size: 0.9rem;
+}
+
+.Btn:hover {
+   background-color: rgb(19, 179, 157);
+}
+
+.cancel {
+   background-color: rgb(105, 105, 105);
+   margin-right: 8px;
+}
+
+.cancel:hover {
+   background-color: rgb(148, 148, 148);
+}
+
+.edit {
+   background-color: rgb(104, 126, 145);
+   width: 15rem;
+}
+
+.edit:hover {
+   background-color: rgb(137, 165, 189);
+}
+
+.start {
+   width: 15rem;
+   margin: 1rem;
+}
+
+/* __________ Overlays __________ */
+#backdrop {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7);
+   display: none;
+}
+
+.modal {
+   position: fixed;
+   top: 20%;
+   left: 5%;
+   width: 90%;
+   background-color: azure;
+   padding: 1rem;
+   border-radius: 5px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   display: none;
+}
+
+@media (min-width: 48rem) {
+   .modal {
+      left: calc(50% - 20rem);
+      width: 40rem;
+   }
+}
+
+.nameEntry {
+   margin-top: 8px;
+}
+
+.formControl {
+   margin: 1rem 0;
+}
+
+.formControl label {
+   display: block;
+   margin-bottom: 0.5rem;
+}
+
+.formControl input {
+   font-weight: bold;
+}
+
+/* __________ Game Config __________ */
+#gameConfig {
+   width: 90%;
+   max-width: 40rem;
+   margin: 3rem auto;
+   text-align: center;
+}
+
+#gameConfig ol{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+#gameConfig li {
+   margin: 1rem;
+   padding: 1rem;
+   width: 50%;
+   background-color: rgb(125, 189, 180);
+   border-radius: 3px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#gameConfig h2 {
+   margin: 0.5rem 0;
+}
+
+#gameConfig h3 {
+   margin: 0.5rem 0;
+}
+
+.playerToken {
+   font-size: 2rem;
+   font-weight: bold;
+   margin: 1rem 0 0.5rem 0;
+}
+
+#configErr {
+   color: red;
+}
+
+/* __________ Active Game __________ */
+#activeGame {
+   text-align: center;
+   margin: 2rem 0 5rem 0;
+   /* display: none; */
+}
+
+#gameOver {
+   max-width: 40rem;
+   margin: auto;
+   width: 90%;
+   padding: 1rem 2rem;
+   background-color: rgb(125, 189, 180);
+   border-radius: 3px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   display: none;
+}
+
+#gameOver h3 {
+   font-size: 2.5rem;
+}
+
+#activePlayer {
+   font-weight: 2rem;
+   font-weight: bold;
+}
+
+#gameBoard {
+   list-style: none;
+   margin: 1rem 0;
+   padding: 0;
+   display: grid;
+   grid-template-columns: 6rem 6rem 6rem;
+   grid-template-rows: repeat(3, 6rem);
+   justify-content: center;
+   gap: 0.5rem;
+}
+
+#gameBoard li {
+   background-color: rgb(125, 189, 180);
+   border-radius: 2px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2.5rem;
+   font-weight: bold;
+   font-family: "Josefin Sans";
+}
+
+#gameBoard li:hover {
+   background-color: rgb(38, 121, 110);
+}
+
+#gameBoard li.disabled {
+   background-color: rgb(38, 121, 110);
+   cursor: default;
+   color: white;
+}
