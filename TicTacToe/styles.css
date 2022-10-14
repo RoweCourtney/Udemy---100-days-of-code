@@ -149,7 +149,7 @@ h2, p {
    margin: 1rem 0 0.5rem 0;
 }
 
-#configErr {
+#configErr, #nameErr, #notEmpty {
    color: red;
 }
 
@@ -157,7 +157,7 @@ h2, p {
 #activeGame {
    text-align: center;
    margin: 2rem 0 5rem 0;
-   /* display: none; */
+   display: none;
 }
 
 #gameOver {
